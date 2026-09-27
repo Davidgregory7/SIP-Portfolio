@@ -33,9 +33,8 @@ document.querySelector('#contact-form').addEventListener('submit', event => {
   const data = new FormData(event.currentTarget);
   const subject = encodeURIComponent(`Portfolio inquiry from ${data.get('name')}`);
   const body = encodeURIComponent(`${data.get('message')}\n\nReply to: ${data.get('email')}`);
-  document.querySelector('#form-status').textContent = 'Add your email address to script.js before publishing to activate this inquiry form.';
-  // After adding a verified address, replace the next line with:
-  // window.location.href = `mailto:YOUR_EMAIL?subject=${subject}&body=${body}`;
-  void subject; void body;
+ window.location.href = `mailto:DGREGORY83851@uat.edu?subject=${subject}&body=${body}`;
+document.querySelector('#form-status').textContent =
+  'Your email application should open with the inquiry prepared.';
 });
 document.querySelector('#year').textContent = new Date().getFullYear();
