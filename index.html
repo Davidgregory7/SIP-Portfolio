@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="David Gregory's Computer Science portfolio and MemoryLens SIP project.">
+  <title>David Gregory | Computer Science Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="David Gregory home"><span>DG</span> David Gregory</a>
+    <button class="menu-button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav id="site-nav" aria-label="Primary navigation">
+      <a href="#home">Home</a><a href="#sip">SIP</a><a href="#boards">Boards</a><a href="#projects">Projects</a><a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="hero section">
+      <div class="hero-copy reveal">
+        <p class="eyebrow">Computer Science · UAT</p>
+        <h1>Software that makes everyday life easier.</h1>
+        <p class="lead">David Gregory is a Computer Science student and aspiring full-stack developer who builds accessible, data-driven applications with a focus on practical human needs.</p>
+        <div class="actions"><a class="button primary" href="#sip">Explore MemoryLens</a><a class="button secondary" href="#projects">View projects</a></div>
+      </div>
+      <div class="hero-card reveal" aria-label="Areas of focus">
+        <p>Areas of focus</p>
+        <strong>Full-stack development</strong><strong>Accessible interfaces</strong><strong>Data-driven software</strong><strong>Human-centered design</strong>
+      </div>
+    </section>
+
+    <section id="sip" class="section dark-section">
+      <div class="section-heading reveal"><p class="eyebrow">Student Innovation Project</p><h2>MemoryLens</h2><p>A task-support application for Meta display glasses designed for people living with early-stage Alzheimer’s disease or other memory loss.</p></div>
+      <div class="feature-grid">
+        <article class="feature reveal"><span>01</span><h3>Innovation claim</h3><p>MemoryLens extends a mobile task manager to smart glasses so wearers can receive hands-free reminders and respond by voice or gesture. Its caregiver log preserves uncertainty by separating completed, skipped, dismissed, and unanswered prompts.</p></article>
+        <article class="feature reveal"><span>02</span><h3>Project description</h3><p>The MVP includes caregiver task scheduling, a glasses reminder interface, four response states, a secure activity log, and follow-up alerts for unanswered high-priority prompts. It will not diagnose disease, verify medication use, or store continuous video.</p></article>
+        <article class="feature reveal"><span>03</span><h3>Created value</h3><p>Prompts appear within the wearer’s field of view without requiring a phone. Authorized caregivers receive clearer follow-up information while the design limits unnecessary surveillance.</p></article>
+      </div>
+
+      <div class="prototype reveal">
+        <div class="glasses-card"><small>GLASSES VIEW · 9:00 AM</small><h3>Drink a glass of water</h3><p>Say or select a response</p><div class="response-row"><b>Completed</b><b>Skip</b><b>Repeat</b></div></div>
+        <div class="flow" aria-hidden="true">Response → Log</div>
+        <div class="log-card"><small>CAREGIVER LOG · TODAY</small><p><b>8:00 Breakfast</b><span>Confirmed</span></p><p><b>9:00 Water</b><span>Completed</span></p><p><b>12:00 Medication</b><span class="warning">Unanswered</span></p><strong>Follow-up suggested</strong></div>
+      </div>
+
+      <div class="resource-grid reveal">
+        <div><h3>Planned technical stack</h3><p>JavaScript, React Native, HTML/CSS, REST APIs, SQL, secure authentication, and Meta wearable development tools.</p></div>
+        <div><h3>SIP artifacts</h3><p><a href="assets/MemoryLens-SIP-Pitch.pptx">SIP pitch presentation</a> · <a href="https://github.com/Davidgregory7" target="_blank" rel="noreferrer">GitHub code placeholder</a></p></div>
+        <div class="placeholder"><h3>SIP Brief — Week 4</h3><p>The completed SIP Brief will be embedded or linked here.</p></div>
+      </div>
+    </section>
+
+    <section id="boards" class="section">
+      <div class="section-heading reveal"><p class="eyebrow">Boards Preparation</p><h2>Advancing Computer Science objectives</h2><p>Official UAT degree objectives that will guide project evidence for SIP411.</p></div>
+      <ol class="objectives">
+        <li class="reveal"><span>01</span><p>Document the software development process to analyze a problem and to design, build, and test software solutions.</p></li>
+        <li class="reveal"><span>02</span><p>Demonstrate software development skills using more than one programming language and development environment.</p></li>
+        <li class="reveal"><span>03</span><p>Implement data-driven solutions.</p></li>
+        <li class="reveal"><span>04</span><p>Design and implement software solutions for multiple platforms including mobile devices.</p></li>
+        <li class="reveal"><span>05</span><p>Design, develop, and maintain object-oriented software solutions utilizing inheritance, encapsulation, polymorphism, and abstraction.</p></li>
+        <li class="reveal"><span>06</span><p>Within software solutions, describe, implement, and analyze data structure techniques.</p></li>
+      </ol>
+      <p class="source-note">Source: <a href="https://www.uat.edu/computer-science-degree" target="_blank" rel="noreferrer">University of Advancing Technology — Advancing Computer Science Degree Objectives</a></p>
+    </section>
+
+    <section id="projects" class="section soft-section">
+      <div class="section-heading reveal"><p class="eyebrow">Selected Work</p><h2>Projects</h2><p>Coursework and personal projects demonstrating software development, machine learning, and interface design.</p></div>
+      <div class="project-grid">
+        <article class="project reveal"><p class="tag">JavaScript · Web</p><h3>Bug Hunter</h3><p>An interactive debugging game with mission progression, reusable functions, and persistent browser-based progress.</p><a href="https://github.com/Davidgregory7/CSC256/tree/main/BugHunter-FinalProject" target="_blank" rel="noreferrer">View repository →</a></article>
+        <article class="project reveal"><p class="tag">Java · Software Engineering</p><h3>Warehouse Inventory System</h3><p>A structured Java application developed through requirements, architecture, testing, refactoring, and documentation phases.</p><a href="https://github.com/Davidgregory7/CSC318" target="_blank" rel="noreferrer">View repository →</a></article>
+        <article class="project reveal"><p class="tag">Python · Machine Learning</p><h3>Student Performance Predictor</h3><p>A GUI-based prediction tool that prepares student data and uses a trained model to estimate academic outcomes.</p><span>Repository link coming soon</span></article>
+        <article class="project reveal"><p class="tag">Python · Reinforcement Learning</p><h3>Warehouse Safety Scout</h3><p>An 8×8 Q-learning simulation where an agent learns routes around hazards using rewards, penalties, telemetry, and CSV export.</p><span>Repository link coming soon</span></article>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact-section">
+      <div class="section-heading reveal"><p class="eyebrow">Contact</p><h2>Let’s connect.</h2><p>Questions about MemoryLens, software projects, or collaboration are welcome.</p></div>
+      <div class="contact-layout">
+        <div class="contact-links reveal"><a href="https://github.com/Davidgregory7" target="_blank" rel="noreferrer">GitHub · Davidgregory7</a><p class="needs-update"><b>Before submitting:</b> replace this note with your preferred UAT email address.</p></div>
+        <form class="contact-form reveal" id="contact-form">
+          <label>Name<input name="name" autocomplete="name" required></label>
+          <label>Email<input type="email" name="email" autocomplete="email" required></label>
+          <label>Message<textarea name="message" rows="5" required></textarea></label>
+          <button class="button primary" type="submit">Prepare inquiry</button><p id="form-status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer><p>© <span id="year"></span> David Gregory · Built for UAT SIP and Boards</p></footer>
+</body>
+</html>
