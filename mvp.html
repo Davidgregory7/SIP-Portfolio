@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="MemoryLens browser-based MVP by David Gregory.">
+  <title>MemoryLens MVP | David Gregory</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="mvp.css">
+  <script src="mvp.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="index.html#sip"><span>ML</span> MemoryLens</a>
+    <div class="top-actions">
+      <span class="prototype-label">Browser MVP</span>
+      <button id="reset-demo" class="text-button" type="button">Reset demo</button>
+      <a class="back-link" href="index.html#sip">← Portfolio</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="intro">
+      <div>
+        <p class="eyebrow">Hardware-independent proof of concept</p>
+        <h1>Daily support, without losing human context.</h1>
+        <p>MemoryLens simulates how smart-display reminders could help a person with early-stage memory loss while giving an authorized caregiver a clear, limited activity record.</p>
+      </div>
+      <aside>
+        <strong>No smart glasses required</strong>
+        <p>This MVP runs entirely in the browser. It demonstrates the planned workflow and does not claim direct Meta Ray-Ban Display compatibility.</p>
+      </aside>
+    </section>
+
+    <nav class="view-tabs" aria-label="MVP views">
+      <button class="tab active" data-view="wearer" type="button">Wearer simulation</button>
+      <button class="tab" data-view="caregiver" type="button">Caregiver dashboard</button>
+    </nav>
+
+    <section id="wearer-view" class="app-view active" aria-labelledby="wearer-heading">
+      <div class="view-heading">
+        <div><p class="eyebrow">Simulated glasses interface</p><h2 id="wearer-heading">Wearer view</h2></div>
+        <p class="privacy-note">Only reminder responses are logged. No camera or continuous audio is used.</p>
+      </div>
+
+      <div class="wearer-layout">
+        <div class="glasses-shell" aria-live="polite">
+          <div class="lens-display">
+            <div class="lens-status"><span id="lens-time">9:00 AM</span><span class="status-dot">● Ready</span></div>
+            <div id="reminder-content">
+              <p class="reminder-label">CURRENT REMINDER</p>
+              <h3 id="reminder-title">Loading reminder…</h3>
+              <p id="reminder-instruction">Choose the response that best describes what happened.</p>
+              <div class="response-grid">
+                <button type="button" data-response="Completed">✓ Completed</button>
+                <button type="button" data-response="Skipped">→ Skip</button>
+                <button type="button" data-response="Dismissed">× Dismiss</button>
+                <button type="button" data-response="Remind later">↻ Remind later</button>
+              </div>
+            </div>
+            <div id="empty-reminder" class="empty-state" hidden>
+              <span>✓</span><h3>No pending reminders</h3><p>A caregiver can schedule another task from the dashboard.</p>
+            </div>
+            <p id="wearer-feedback" class="feedback" role="status"></p>
+          </div>
+        </div>
+
+        <aside class="simulation-panel">
+          <p class="eyebrow">How to test</p>
+          <ol>
+            <li>Respond to the reminder in the simulated lens.</li>
+            <li>Open the caregiver dashboard.</li>
+            <li>Review the status and schedule another task.</li>
+          </ol>
+          <button id="next-reminder" class="secondary-button" type="button">Show next reminder</button>
+          <p class="small-copy">The browser stores demonstration data only on this device.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section id="caregiver-view" class="app-view" aria-labelledby="caregiver-heading" hidden>
+      <div class="view-heading">
+        <div><p class="eyebrow">Authorized support view</p><h2 id="caregiver-heading">Caregiver dashboard</h2></div>
+        <div class="summary" aria-label="Task summary">
+          <div><strong id="scheduled-count">0</strong><span>Scheduled</span></div>
+          <div><strong id="completed-count">0</strong><span>Completed</span></div>
+          <div><strong id="attention-count">0</strong><span>Needs attention</span></div>
+        </div>
+      </div>
+
+      <div class="dashboard-grid">
+        <section class="panel">
+          <div class="panel-heading"><div><p class="eyebrow">Today</p><h3>Task activity</h3></div><button id="mark-unanswered" class="text-button" type="button">Simulate unanswered</button></div>
+          <div id="activity-list" class="activity-list"></div>
+        </section>
+
+        <section class="panel schedule-panel">
+          <p class="eyebrow">Add support task</p>
+          <h3>Schedule a reminder</h3>
+          <form id="task-form">
+            <label>Task name<input id="task-name" name="task" maxlength="60" placeholder="Example: Take afternoon medication" required></label>
+            <label>Reminder time<input id="task-time" name="time" type="time" required></label>
+            <label>Priority<select id="task-priority" name="priority"><option>Routine</option><option>Important</option><option>High</option></select></label>
+            <button class="primary-button" type="submit">Schedule reminder</button>
+            <p id="form-message" class="form-message" role="status"></p>
+          </form>
+        </section>
+      </div>
+    </section>
+
+    <section class="scope">
+      <div><span>Included in MVP</span><p>Reminder scheduling, four response states, unanswered-state simulation, caregiver activity log, responsive layout, and persistent browser data.</p></div>
+      <div><span>Future integration</span><p>Compatible wearable hardware, voice/gesture input, authenticated caregiver accounts, encrypted cloud synchronization, and usability testing.</p></div>
+      <div><span>Safety boundary</span><p>MemoryLens is a support concept—not a diagnostic tool, medical-device replacement, or confirmation that medication was actually taken.</p></div>
+    </section>
+  </main>
+
+  <footer>MemoryLens MVP · David Gregory · UAT Student Innovation Project</footer>
+</body>
+</html>
